@@ -60,7 +60,7 @@ key = password
 value = 12345
 
 Data Response : => warning :  accessToken Expires 60 Minutes
-{
+```{
     "id": 1,
     "name": "Mã cơ sở khám chửa bệnh số 1",
     "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
@@ -68,27 +68,30 @@ Data Response : => warning :  accessToken Expires 60 Minutes
     "expDate": 1609483221000,
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTI4OTYwNCwiZXhwIjoxNjgxODk0NDA0fQ.eiuxGedn1Xxji4gn_uDgK7-KiN3OtDXBa-zufKokHsA"
 }
+```
 
 ### 2. add doctor
 Request methods: post
+
 http://localhost:8000/api/v1/them-bac-si
-
-
 
 Body : x-www-form-urlendcoded
 
 key = ma_lien_thong_bac_si
+
 value = BS001
 
 Authorization : 
 
 Type = Bearer Token
+
 Token = accessToken (get from /api/auth/dang-nhap-co-so-kham-chua-benh)
 
 Data Response :
 
-{
+```{
     "id": 2,
     "ma_lien_thong_bac_si": "BS001",
     "ma_lien_thong_co_so_kham_chua_benh": "MF0001"
 }
+```
