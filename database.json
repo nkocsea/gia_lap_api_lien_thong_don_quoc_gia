@@ -44,8 +44,8 @@
       "name": "Mã cơ sở khám chửa bệnh số 1",
       "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
       "password": "12345",
-      "accessToken": "",
-      "expDate": 1609483221000
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTI4OTYwNCwiZXhwIjoxNjgxMjkzMjA0fQ.dh1DdzTPHS9FisMJkKLC__da36NDELmyqtfxkU_97-k",
+      "expDate": 1681289604415
     },
     {
       "id": 2,
@@ -61,6 +61,11 @@
       "id": 1,
       "ma_lien_thong_bac_si": "BS001",
       "ma_lien_thong_co_so_kham_chua_benh": "MF0002"
+    },
+    {
+      "id": 2,
+      "ma_lien_thong_bac_si": "BS001",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0001"
     }
   ],
   "doctors": [
