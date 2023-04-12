@@ -1,0 +1,179 @@
+{
+  "protectedResources": {
+    "users": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "medicalFacility": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "products": [
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ]
+  },
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Administrator",
+      "lastName": "",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "avatar": "https://robohash.org/eaquequasincidunt.png?size=50x50&set=set1",
+      "gender": "Genderfluid",
+      "phone": "933-658-1213",
+      "birthday": "1994-03-23",
+      "status": true,
+      "createdAt": 1609483221000,
+      "modifiedAt": 1609483221000
+    }
+  ],
+  "medicalFacility": [
+    {
+      "id": 1,
+      "name": "Mã cơ sở khám chửa bệnh số 1",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
+      "password": "12345",
+      "accessToken": "",
+      "expDate": 1609483221000
+    },
+    {
+      "id": 2,
+      "name": "Mã cơ sở khám chửa bệnh số 2",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0002",
+      "password": "12345",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTY4MTI4NjM3MCwiZXhwIjoxNjgxMjg3MjcwfQ.qggY_oE24Ja3vAf3XHfokb7KxE-nWL4dWTIyAVjg3Nk",
+      "expDate": 1681286370779
+    }
+  ],
+  "medicalFacility_doctors": [
+    {
+      "id": 1,
+      "ma_lien_thong_bac_si": "BS001",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0002"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "bác sĩ số 1",
+      "ma_lien_thong_bac_si": "BS001",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "name": "bác sĩ số 2",
+      "ma_lien_thong_bac_si": "BS002",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
+      "password": "12345"
+    },
+    {
+      "id": 3,
+      "name": "bác sĩ số 3",
+      "ma_lien_thong_bac_si": "BS003",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0002",
+      "password": "12345"
+    },
+    {
+      "id": 4,
+      "name": "bác sĩ số 4",
+      "ma_lien_thong_bac_si": "BS004",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0002",
+      "password": "12345"
+    },
+    {
+      "id": 5,
+      "name": "bác sĩ số 5",
+      "ma_lien_thong_bac_si": "BS005",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
+      "password": "12345"
+    }
+  ],
+  "prescription": [
+    {
+      "loai_don_thuoc": "loai_don_thuoc",
+      "ma_don_thuoc": "ma_don_thuoc",
+      "ho_ten_benh_nhan": "ho_ten_benh_nhan",
+      "ma_dinh_danh_y_te": "ma_dinh_danh_y_te",
+      "ma_dinh_danh_cong_dan": "ma_dinh_danh_cong_dan",
+      "ngay_sinh_benh_nhan": "ngay_sinh_benh_nhan",
+      "can_nang": "can_nang",
+      "gioi_tinh": "gioi_tinh",
+      "ma_so_the_bao_hiem_y_te": "ma_so_the_bao_hiem_y_te",
+      "thong_tin_nguoi_giam_ho": "thong_tin_nguoi_giam_ho",
+      "dia_chi": "dia_chi",
+      "chan_doan": [
+        {
+          "ma_chan_doan": "ma_chan_doan",
+          "ten_chan_doan": "ten_chan_doan",
+          "ket_luan": "ket_luan"
+        }
+      ],
+      "luu_y": "luu_y",
+      "hinh_thuc_dieu_tri": "hinh_thuc_dieu_tri",
+      "dot_dung_thuoc": "dot_dung_thuoc",
+      "thong_tin_don_thuoc": [
+        {
+          "ma_thuoc": "ma_thuoc1",
+          "biet_duoc": "biet_duoc",
+          "ten_thuoc": "ten_thuoc",
+          "don_vi_tinh": "don_vi_tinh",
+          "so_luong": "so_luong",
+          "cach_dung": "cach_dung"
+        },
+        {
+          "ma_thuoc": "ma_thuoc2",
+          "biet_duoc": "biet_duoc",
+          "ten_thuoc": "ten_thuoc",
+          "don_vi_tinh": "don_vi_tinh",
+          "so_luong": "so_luong",
+          "cach_dung": "cach_dung"
+        },
+        {
+          "ma_thuoc": "ma_thuoc3",
+          "biet_duoc": "biet_duoc",
+          "ten_thuoc": "ten_thuoc",
+          "don_vi_tinh": "don_vi_tinh",
+          "so_luong": "so_luong",
+          "cach_dung": "cach_dung"
+        },
+        {
+          "ma_thuoc": "ma_thuoc4",
+          "biet_duoc": "biet_duoc",
+          "ten_thuoc": "ten_thuoc",
+          "don_vi_tinh": "don_vi_tinh",
+          "so_luong": "so_luong",
+          "cach_dung": "cach_dung"
+        }
+      ],
+      "loi_dan": "loi_dan ",
+      "so_dien_thoai_nguoi_kham_benh": "so_dien_thoai_nguoi_kham_benh",
+      "ngay_tai_kham": "ngay_tai_kham",
+      "ngay_gio_ke_don": "ngay_gio_ke_don",
+      "signature": "chu_ky_so"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Pork Salted Bellies",
+      "price": 442,
+      "quantity": 16,
+      "thumbnail": "http://dummyimage.com/213x100.png/dddddd/000000",
+      "status": true,
+      "createdAt": 1610632995000,
+      "modifiedAt": 1615620960000
+    }
+  ]
+}
