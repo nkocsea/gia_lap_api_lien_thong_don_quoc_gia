@@ -1,6 +1,6 @@
 export const CONFIG = {
   accessTokenSecret: 'accessToken',
-  accessTokenExpiresInMinutes: '60',
+  accessTokenExpiresInMinutes: '10080',
   refreshTokenSecret: 'refreshToken',
   refreshTokenExpiresInMinutes: '10080',
   databaseFile: 'database.json',

@@ -55,3 +55,28 @@ export const isAuthenticatedFacility = (req) => {
 
   return decoded;
 };
+
+export const isAuthenticatedDoctors = (req) => {
+  // console.log("nvp: i'm here", req);
+  let token = '';
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.split(' ')[0] === 'Bearer'
+  ) {
+    token = req.headers.authorization.split(' ')[1];
+  }
+  console.log("nvp: isAuthenticatedDoctors > token:: " , token);
+  let decoded;
+  try {
+    decoded = jwt.verify(token, CONFIG.accessTokenSecret);
+    // if(decoded.exp)
+    // console.log("nvp:decoded:: " , decoded);
+    console.log("nvp:isAuthenticatedDoctors > decoded:: " , decoded);
+  } catch (err) {
+    console.log("nvp:isAuthenticatedDoctors > catch = err:: ", err);
+
+    return false;
+  }
+  
+  return decoded;
+};

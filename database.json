@@ -44,16 +44,16 @@
       "name": "Mã cơ sở khám chửa bệnh số 1",
       "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
       "password": "12345",
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTI4OTYwNCwiZXhwIjoxNjgxMjkzMjA0fQ.dh1DdzTPHS9FisMJkKLC__da36NDELmyqtfxkU_97-k",
-      "expDate": 1681289604415
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTg3OTczNSwiZXhwIjoxNjgyNDg0NTM1fQ.cgcvefewAyq55NHRB9_IUIitYIsRgYX7nJ88-7PlNNA",
+      "expDate": 1681879735515
     },
     {
       "id": 2,
       "name": "Mã cơ sở khám chửa bệnh số 2",
       "ma_lien_thong_co_so_kham_chua_benh": "MF0002",
       "password": "12345",
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTY4MTI4NjM3MCwiZXhwIjoxNjgxMjg3MjcwfQ.qggY_oE24Ja3vAf3XHfokb7KxE-nWL4dWTIyAVjg3Nk",
-      "expDate": 1681286370779
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTY4MTI5MjEyNSwiZXhwIjoxNjgxMjk1NzI1fQ.sJ1dvUwQy05lGeR3HYL7auRqsPe0i8txWUwoTopbTls",
+      "expDate": 1681292125403
     }
   ],
   "medicalFacility_doctors": [
@@ -73,101 +73,37 @@
       "id": 1,
       "name": "bác sĩ số 1",
       "ma_lien_thong_bac_si": "BS001",
-      "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
-      "password": "12345"
+      "password": "12345",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTg4MDEzMywiZXhwIjoxNjgyNDg0OTMzfQ.R7AvaMgz6uBj0nFybMbd94gvPTywZ-8_WAj95JaqC8A",
+      "expDate": 1681880133439
     },
     {
       "id": 2,
       "name": "bác sĩ số 2",
       "ma_lien_thong_bac_si": "BS002",
-      "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
       "password": "12345"
     },
     {
       "id": 3,
       "name": "bác sĩ số 3",
       "ma_lien_thong_bac_si": "BS003",
-      "ma_lien_thong_co_so_kham_chua_benh": "MF0002",
       "password": "12345"
     },
     {
       "id": 4,
       "name": "bác sĩ số 4",
       "ma_lien_thong_bac_si": "BS004",
-      "ma_lien_thong_co_so_kham_chua_benh": "MF0002",
       "password": "12345"
     },
     {
       "id": 5,
       "name": "bác sĩ số 5",
       "ma_lien_thong_bac_si": "BS005",
-      "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
       "password": "12345"
     }
   ],
   "prescription": [
-    {
-      "loai_don_thuoc": "loai_don_thuoc",
-      "ma_don_thuoc": "ma_don_thuoc",
-      "ho_ten_benh_nhan": "ho_ten_benh_nhan",
-      "ma_dinh_danh_y_te": "ma_dinh_danh_y_te",
-      "ma_dinh_danh_cong_dan": "ma_dinh_danh_cong_dan",
-      "ngay_sinh_benh_nhan": "ngay_sinh_benh_nhan",
-      "can_nang": "can_nang",
-      "gioi_tinh": "gioi_tinh",
-      "ma_so_the_bao_hiem_y_te": "ma_so_the_bao_hiem_y_te",
-      "thong_tin_nguoi_giam_ho": "thong_tin_nguoi_giam_ho",
-      "dia_chi": "dia_chi",
-      "chan_doan": [
-        {
-          "ma_chan_doan": "ma_chan_doan",
-          "ten_chan_doan": "ten_chan_doan",
-          "ket_luan": "ket_luan"
-        }
-      ],
-      "luu_y": "luu_y",
-      "hinh_thuc_dieu_tri": "hinh_thuc_dieu_tri",
-      "dot_dung_thuoc": "dot_dung_thuoc",
-      "thong_tin_don_thuoc": [
-        {
-          "ma_thuoc": "ma_thuoc1",
-          "biet_duoc": "biet_duoc",
-          "ten_thuoc": "ten_thuoc",
-          "don_vi_tinh": "don_vi_tinh",
-          "so_luong": "so_luong",
-          "cach_dung": "cach_dung"
-        },
-        {
-          "ma_thuoc": "ma_thuoc2",
-          "biet_duoc": "biet_duoc",
-          "ten_thuoc": "ten_thuoc",
-          "don_vi_tinh": "don_vi_tinh",
-          "so_luong": "so_luong",
-          "cach_dung": "cach_dung"
-        },
-        {
-          "ma_thuoc": "ma_thuoc3",
-          "biet_duoc": "biet_duoc",
-          "ten_thuoc": "ten_thuoc",
-          "don_vi_tinh": "don_vi_tinh",
-          "so_luong": "so_luong",
-          "cach_dung": "cach_dung"
-        },
-        {
-          "ma_thuoc": "ma_thuoc4",
-          "biet_duoc": "biet_duoc",
-          "ten_thuoc": "ten_thuoc",
-          "don_vi_tinh": "don_vi_tinh",
-          "so_luong": "so_luong",
-          "cach_dung": "cach_dung"
-        }
-      ],
-      "loi_dan": "loi_dan ",
-      "so_dien_thoai_nguoi_kham_benh": "so_dien_thoai_nguoi_kham_benh",
-      "ngay_tai_kham": "ngay_tai_kham",
-      "ngay_gio_ke_don": "ngay_gio_ke_don",
-      "signature": "chu_ky_so"
-    }
+    
   ],
   "products": [
     {

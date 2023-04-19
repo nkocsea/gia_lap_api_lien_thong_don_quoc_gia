@@ -18,6 +18,8 @@ import {
   uploadFilesHandler,
   medicalFacilityHandler,
   addDoctorHandler,
+  doctorLoginHandler,
+  sendPrescriptionHandler,
 } from './src/rest.js';
 import socketHandler from './src/socket-io.js';
 
@@ -88,6 +90,15 @@ app.post('/login', (req, res) => {
 app.post('/api/auth/dang-nhap-co-so-kham-chua-benh', (req, res) => {
   medicalFacilityHandler(db, req, res);
 });
+
+//doctor Login request
+app.post('/api/auth/dang-nhap-bac-si', (req, res) => {
+ doctorLoginHandler(db, req, res);
+});
+
+app.post('/api/v1/gui-don-thuoc', (req, res) => {
+  sendPrescriptionHandler(db, req, res);
+ });
 
 app.post('/api/v1/them-bac-si', (req, res) => {
   addDoctorHandler(db, req, res);
