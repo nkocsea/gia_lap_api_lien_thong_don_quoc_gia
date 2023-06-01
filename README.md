@@ -43,7 +43,9 @@ yarn install
 
 All the data was placed in `database.json`. Edit it to suit your purpose but keep object `users` to use authentication feature.
 
+### Test with Postman
 
+install and import file: GiaLapToaThuocQuocGia.postman_collection.json
 ## URL test with Postman
 
 ### 1. Login 
@@ -97,5 +99,29 @@ Data Response :
     "id": 2,
     "ma_lien_thong_bac_si": "BS001",
     "ma_lien_thong_co_so_kham_chua_benh": "MF0001"
+}
+```
+
+### 2. remove doctor
+Request methods: post
+
+http://localhost:8000/api/v1/xoa-bac-si
+
+Body : row
+
+{
+   "doctorCode": "BS2000"
+}
+
+Authorization : 
+
+Type = Bearer Token
+
+Token = accessToken (get from /api/auth/dang-nhap-co-so-kham-chua-benh)
+
+Data Response :
+
+```{
+     "success": "Bạn đã xóa bác sĩ khỏi cơ sở khám chữa bệnh thành công",
 }
 ```

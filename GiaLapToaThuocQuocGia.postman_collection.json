@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "9fe7f4eb-97e9-4a52-9583-b952c0b642d5",
+		"name": "GiaLapToaThuocQuocGia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26595943"
+	},
+	"item": [
+		{
+			"name": "đăng nhập cơ sở khám",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ma_lien_thong_co_so_kham_chua_benh",
+							"value": "MF0001",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/dang-nhap-co-so-kham-chua-benh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"dang-nhap-co-so-kham-chua-benh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "đăng nhập bác sĩ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ma_lien_thong_co_so_kham_chua_benh",
+							"value": "MF0001",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/dang-nhap-co-so-kham-chua-benh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"dang-nhap-co-so-kham-chua-benh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thêm bác sĩ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTI4OTYwNCwiZXhwIjoxNjgxMjkzMjA0fQ.dh1DdzTPHS9FisMJkKLC__da36NDELmyqtfxkU_97-k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ma_lien_thong_bac_si",
+							"value": "BS001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/them-bac-si",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"them-bac-si"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xóa bác sĩ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTI4OTYwNCwiZXhwIjoxNjgxMjkzMjA0fQ.dh1DdzTPHS9FisMJkKLC__da36NDELmyqtfxkU_97-k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ma_lien_thong_bac_si",
+							"value": "BS001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/them-bac-si",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"them-bac-si"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thông tin đơn thuốc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-name",
+						"value": "APP001",
+						"type": "text"
+					},
+					{
+						"key": "app-key",
+						"value": "AAAAAAAAAAAAAAAAAA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/thong-tin-don-thuoc/BVDKTH2300001-n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"thong-tin-don-thuoc",
+						"BVDKTH2300001-n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

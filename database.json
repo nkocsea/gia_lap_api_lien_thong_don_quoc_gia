@@ -44,8 +44,8 @@
       "name": "Mã cơ sở khám chửa bệnh số 1",
       "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
       "password": "12345",
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4NTU4NjA1NCwiZXhwIjoxNjg2MTkwODU0fQ.AF7H1lPAbZYHtO7AOdRo42k-OiUjqwG0wQfOT_CKpFw",
-      "expDate": 1685586054690
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4NTYxNDAyNiwiZXhwIjoxNjg2MjE4ODI2fQ.fLzbBH1N7gGXRbM5-qhooKSyqpFdzdUFtF7kfojdV9c",
+      "expDate": 1685614026735
     },
     {
       "id": 2,
@@ -76,9 +76,14 @@
       "ma_lien_thong_co_so_kham_chua_benh": "MF0001"
     },
     {
-      "id": 5,
+      "id": 4,
       "ma_lien_thong_bac_si": "BS002",
-      "ma_lien_thong_co_so_kham_chua_benh": "MF0003"
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0001"
+    },
+    {
+      "id": 5,
+      "ma_lien_thong_bac_si": "BS001",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0001"
     }
   ],
   "doctors": [
@@ -87,8 +92,8 @@
       "name": "bác sĩ số 1",
       "ma_lien_thong_bac_si": "BS001",
       "password": "12345",
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4NTU4ODI5MywiZXhwIjoxNjg2MTkzMDkzfQ.bEubl690xUOp8iRR_pXU9u3DbRO_mpkdgdj2cV60Q6g",
-      "expDate": 1685588293991
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4NTYxNDMxNCwiZXhwIjoxNjg2MjE5MTE0fQ.9lmICeKVRsxF_rFBAHCSMcYF5bY4lxg_bid_bL-B2bA",
+      "expDate": 1685614314009
     },
     {
       "id": 2,
