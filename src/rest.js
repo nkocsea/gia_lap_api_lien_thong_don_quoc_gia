@@ -5,6 +5,7 @@ import {
   generateAccessToken,
   generateRefreshToken,
   decodeRefreshToken,
+  isAuthenticatedApp,
 } from "../utils/jwt-authenticate.js";
 
 
@@ -46,12 +47,14 @@ export const medicalFacilityHandler = (db, req, res) => {
   if (medicalFacilitys && medicalFacilitys.password === pwd) {
     const accessToken = generateAccessToken(medicalFacilitys.id);
     const refreshToken = generateRefreshToken(medicalFacilitys.id);
+    const tokenType = 'Bearer';
     const {password, ...userWithoutPassword} = medicalFacilitys;
 
     res.jsonp({
       ...userWithoutPassword,
       accessToken,
       refreshToken,
+      tokenType,
     });
 
     db.data.medicalFacility[findIndex].accessToken=accessToken;
@@ -67,6 +70,7 @@ export const medicalFacilityHandler = (db, req, res) => {
 };
 
 export const doctorLoginHandler = (db, req, res) => {
+  console.log("req.body: ", req.body);
   const {ma_lien_thong_co_so_kham_chua_benh, ma_lien_thong_bac_si, password:pwd} = req.body;
 
   const doctor = db.data.doctors.find(
@@ -95,12 +99,14 @@ export const doctorLoginHandler = (db, req, res) => {
   
     const accessToken = generateAccessToken(doctor.id);
     const refreshToken = generateRefreshToken(doctor.id);
+    const tokenType = 'Bearer';
     const {password, ...userWithoutPassword} = doctor;
 
     res.jsonp({
       ...userWithoutPassword,
       accessToken,
       refreshToken,
+      tokenType,
     });
 
     db.data.doctors[findIndex].accessToken=accessToken;
@@ -189,16 +195,74 @@ export const addDoctorHandler = (db, req, res) => {
     medicalFacility_doctors.push(newDoctors);
     db.write();
   
-    res.jsonp(newDoctors);
+    res.jsonp({message: "Success",});
   } else {
-    res.sendStatus(401);
+
+    res.status(401).jsonp({
+      message: "Authorization is incorrect or has expired!",
+    });
   }
+};
+
+export const removeDoctorHandler = (db, req, res) => {
+  const tokenAuth = isAuthenticatedFacility(req);
+
+  if (!tokenAuth) {
+    return res.status(401).jsonp({
+      message: "Authorization is incorrect or has expired!",
+    });
+  }
+    const {ma_lien_thong_bac_si : doctorCode} = req.body;
+    const { facilutyAccessToken: medicalFacilityToken } = req.headers;
+
+    const medical = db.data.medicalFacility.find((facility) => facility.id === tokenAuth.sub);
+  
+    if (!medical) {
+      res.status(400).jsonp({
+        message: "Medical Facility not found!",
+      });
+      return;
+    }
+  
+    if (!doctorCode) {
+      res.status(400).jsonp({message: "ma_lien_thong_bac_si null!"});
+      return;
+    }
+  
+    const existDoctor = db.data.medicalFacility_doctors.find(
+      (doctor) => 
+      doctor.ma_lien_thong_bac_si === doctorCode && 
+      doctor.ma_lien_thong_co_so_kham_chua_benh === medical.ma_lien_thong_co_so_kham_chua_benh
+    );
+  
+    if (!existDoctor) {
+      res.status(400).jsonp({
+        message: "The doctor does not exists!",
+      });
+      return;
+    }
+  
+    //xóa existDoctor trong medicalFacility_doctors
+    db.data.medicalFacility_doctors = db.data.medicalFacility_doctors.filter(
+      (doctor) =>
+        !(
+          doctor.ma_lien_thong_bac_si === doctorCode &&
+          doctor.ma_lien_thong_co_so_kham_chua_benh ===
+            medical.ma_lien_thong_co_so_kham_chua_benh
+        )
+    );
+  
+    db.write();
+  
+    res.jsonp({
+      message: "Bạn đã xóa bác sĩ khỏi cơ sở khám chữa bệnh thành công",
+    });
 };
 
 export const sendPrescriptionHandler = (db, req, res) => {
   // console.log("sendPrescriptionHandler > body :: ", req.body);
   // console.log("nvp: sendPrescriptionHandler > headers:::", req.headers);
-  let tokenAuth = isAuthenticatedDoctors(req);
+  let tokenAuth = isAuthenticatedDoctors(req, db);
 // console.log("nvp: tokenAuth:: ",tokenAuth);
   if (tokenAuth != false && tokenAuth != "") {
     const {
@@ -232,7 +296,7 @@ export const sendPrescriptionHandler = (db, req, res) => {
   
     if (index !== -1) {
       res.status(400).jsonp({
-        message: "The prescription already exists, please choose another code or select the edit prescription function if you want to update the data for PrescriptionCode: "+ma_don_thuoc+" !",
+        message: "failed: the prescription: "+ma_don_thuoc+" already exists!",
       });
       return;
     }
@@ -265,12 +329,62 @@ export const sendPrescriptionHandler = (db, req, res) => {
     prescriptionDB.push(newPrescription);
     db.write();
   
-    res.jsonp({"success":"Gửi đơn thuốc thành công"});
+    res.jsonp({
+      message:"success",
+    });
   } else {
     res.status(401).jsonp({
       message: "Authorization is incorrect or has expired!",
     });
   }
+};
+
+export const getPrescriptionHandler = (db, req, res) => {
+  const appName = req.headers['app-name'];
+  const appKey = req.headers['app-key'];
+  const appDB = db.data.appData;
+
+  console.log("appname: " + appName + " appkey: "+ appKey);
+  const code = req.params.code;
+
+  console.table(appDB)
+  if (!appName) {
+    console.log("nvp: AuthenticatedApp faild : app name is ", appName);
+    return res.status(401).jsonp({
+      message: "AuthenticatedApp faild : app name is ", appName,
+    });
+  }
+  if (!appKey) {
+    console.log("nvp: AuthenticatedApp faild : app key is ", appKey);
+    return res.status(401).jsonp({
+      message: "AuthenticatedApp faild : app key is " + appKey,
+    });
+  }
+  const index = appDB.findIndex(
+      (u) => (u.name === appName && u.key === appKey)
+  )
+  if (index < 0) {
+    return res.status(401).jsonp({
+      message: "failed: App name or App key not matching",
+    });
+  }
+    
+    const prescriptionDB = db.data.prescription;
+    const indexDB = prescriptionDB.findIndex(
+      (u) => u.ma_don_thuoc === code
+    );
+  
+    if (indexDB === -1) {
+      res.status(400).jsonp({
+        message: "failed: the prescription: "+code+" does not exists!",
+      });
+      return;
+    }
+  
+    res.jsonp(
+      prescriptionDB[indexDB]
+    );
+  
 };
 
 export const renewTokenHandler = (req, res) => {

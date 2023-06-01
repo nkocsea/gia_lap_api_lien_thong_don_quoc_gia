@@ -44,16 +44,24 @@
       "name": "Mã cơ sở khám chửa bệnh số 1",
       "ma_lien_thong_co_so_kham_chua_benh": "MF0001",
       "password": "12345",
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTg3OTczNSwiZXhwIjoxNjgyNDg0NTM1fQ.cgcvefewAyq55NHRB9_IUIitYIsRgYX7nJ88-7PlNNA",
-      "expDate": 1681879735515
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4NTU4NjA1NCwiZXhwIjoxNjg2MTkwODU0fQ.AF7H1lPAbZYHtO7AOdRo42k-OiUjqwG0wQfOT_CKpFw",
+      "expDate": 1685586054690
     },
     {
       "id": 2,
       "name": "Mã cơ sở khám chửa bệnh số 2",
       "ma_lien_thong_co_so_kham_chua_benh": "MF0002",
       "password": "12345",
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTY4MTI5MjEyNSwiZXhwIjoxNjgxMjk1NzI1fQ.sJ1dvUwQy05lGeR3HYL7auRqsPe0i8txWUwoTopbTls",
-      "expDate": 1681292125403
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTY4NTU4NzU0OSwiZXhwIjoxNjg2MTkyMzQ5fQ.naSTaRCmIJN5ZxL4au-J-eCN6zrGUdxvTS6u0Cdn5rc",
+      "expDate": 1685587549096
+    },
+    {
+      "id": 3,
+      "name": "Mã cơ sở khám chửa bệnh số 3",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0003",
+      "password": "12345",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImlhdCI6MTY4NTU5MTg2NCwiZXhwIjoxNjg2MTk2NjY0fQ.HjZH4lg8O1MupiMDm-Hb9eGn8B9xaWDWbVxGuhMT9XA",
+      "expDate": 1685591864836
     }
   ],
   "medicalFacility_doctors": [
@@ -63,9 +71,14 @@
       "ma_lien_thong_co_so_kham_chua_benh": "MF0002"
     },
     {
-      "id": 2,
-      "ma_lien_thong_bac_si": "BS001",
+      "id": 3,
+      "ma_lien_thong_bac_si": "BS1000",
       "ma_lien_thong_co_so_kham_chua_benh": "MF0001"
+    },
+    {
+      "id": 5,
+      "ma_lien_thong_bac_si": "BS002",
+      "ma_lien_thong_co_so_kham_chua_benh": "MF0003"
     }
   ],
   "doctors": [
@@ -74,14 +87,16 @@
       "name": "bác sĩ số 1",
       "ma_lien_thong_bac_si": "BS001",
       "password": "12345",
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4MTg4MDEzMywiZXhwIjoxNjgyNDg0OTMzfQ.R7AvaMgz6uBj0nFybMbd94gvPTywZ-8_WAj95JaqC8A",
-      "expDate": 1681880133439
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4NTU4ODI5MywiZXhwIjoxNjg2MTkzMDkzfQ.bEubl690xUOp8iRR_pXU9u3DbRO_mpkdgdj2cV60Q6g",
+      "expDate": 1685588293991
     },
     {
       "id": 2,
       "name": "bác sĩ số 2",
       "ma_lien_thong_bac_si": "BS002",
-      "password": "12345"
+      "password": "12345",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTY4NTYwMjI5MSwiZXhwIjoxNjg2MjA3MDkxfQ.obwmAMFD_Ex-Cw5mN-T0D78hYnnmNB40rbxIZ30ofq8",
+      "expDate": 1685602291825
     },
     {
       "id": 3,
@@ -103,7 +118,560 @@
     }
   ],
   "prescription": [
-    
+    {
+      "loai_don_thuoc": "n",
+      "ma_don_thuoc": "BVDKTH2300001-n",
+      "ho_ten_benh_nhan": "HUỲNH LÊ VŨ ĐẠT",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/04/2023",
+      "can_nang": 0,
+      "gioi_tinh": 2,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "     Việt Nam",
+      "chan_doan": [
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "A22.1",
+          "ten_chan_doan": "Bệnh than thể phổi"
+        }
+      ],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "01/01/2022",
+          "dot_so": "1",
+          "so_thang": "1",
+          "tu_ngay": "01/01/2020"
+        },
+        {
+          "den_ngay": "01/02/2022",
+          "dot_so": "2",
+          "so_thang": "2",
+          "tu_ngay": "01/02/2020"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "Dược chất của ACC 200mg",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "TAC00118",
+          "so_luong": "1",
+          "ten_thuoc": "ACC 200mg"
+        }
+      ],
+      "loi_dan": "aaabbb",
+      "so_dien_thoai_nguoi_kham_benh": "",
+      "ngay_tai_kham": "26/05/2023",
+      "ngay_gio_ke_don": "2023-05-27 14:31:06",
+      "signature": "0"
+    },
+    {
+      "loai_don_thuoc": "c",
+      "ma_don_thuoc": "",
+      "ho_ten_benh_nhan": "",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/01/1970",
+      "can_nang": 0,
+      "gioi_tinh": 1,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "",
+      "chan_doan": [],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "01/01/2022",
+          "dot_so": "1",
+          "so_thang": "1",
+          "tu_ngay": "01/01/2020"
+        },
+        {
+          "den_ngay": "01/02/2022",
+          "dot_so": "2",
+          "so_thang": "2",
+          "tu_ngay": "01/02/2020"
+        }
+      ],
+      "thong_tin_don_thuoc": [],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "",
+      "ngay_tai_kham": "01/01/1970",
+      "ngay_gio_ke_don": "1970-01-01 07:00:00",
+      "signature": "0"
+    },
+    {
+      "loai_don_thuoc": "AAAAAAAA",
+      "ma_don_thuoc": "AAAAAAAAAAAAAAA",
+      "ho_ten_benh_nhan": "",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/01/1970",
+      "can_nang": 8,
+      "gioi_tinh": 1,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "",
+      "chan_doan": [
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        },
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        }
+      ],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "1111111111111",
+          "dot_so": "1",
+          "so_thang": "2",
+          "tu_ngay": "1212121212121"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        }
+      ],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "0909090909",
+      "ngay_tai_kham": "01/01/1970",
+      "ngay_gio_ke_don": "1970-01-01 07:00:11",
+      "signature": "11111111"
+    },
+    {
+      "loai_don_thuoc": "AAAAAAAA",
+      "ma_don_thuoc": "DDRRTTYYUUII",
+      "ho_ten_benh_nhan": "",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/01/1970",
+      "can_nang": 8,
+      "gioi_tinh": 1,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "",
+      "chan_doan": [
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        },
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        }
+      ],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "1111111111111",
+          "dot_so": "1",
+          "so_thang": "2",
+          "tu_ngay": "1212121212121"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        }
+      ],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "0909090909",
+      "ngay_tai_kham": "01/01/1970",
+      "ngay_gio_ke_don": "1970-01-01 07:00:11",
+      "signature": "11111111"
+    },
+    {
+      "loai_don_thuoc": "AAAAAAAA",
+      "ma_don_thuoc": "fffffffff",
+      "ho_ten_benh_nhan": "",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/01/1970",
+      "can_nang": 8,
+      "gioi_tinh": 1,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "",
+      "chan_doan": [
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        },
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        }
+      ],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "1111111111111",
+          "dot_so": "1",
+          "so_thang": "2",
+          "tu_ngay": "1212121212121"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        }
+      ],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "0909090909",
+      "ngay_tai_kham": "01/01/1970",
+      "ngay_gio_ke_don": "1970-01-01 07:00:11",
+      "signature": "11111111"
+    },
+    {
+      "loai_don_thuoc": "c",
+      "ma_don_thuoc": "BVDKTH2300020-c",
+      "ho_ten_benh_nhan": "TEST 19042023 - 01",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/02/1983",
+      "can_nang": 0,
+      "gioi_tinh": 3,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "     Việt Nam",
+      "chan_doan": [],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "01/01/2022",
+          "dot_so": "1",
+          "so_thang": "1",
+          "tu_ngay": "01/01/2020"
+        },
+        {
+          "den_ngay": "01/02/2022",
+          "dot_so": "2",
+          "so_thang": "2",
+          "tu_ngay": "01/02/2020"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "Viên",
+          "ma_thuoc": "TFL00069",
+          "so_luong": "30",
+          "ten_thuoc": "Flucoted"
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "THU00065",
+          "so_luong": "30",
+          "ten_thuoc": "Human Albumin 20% Behring, Low salt"
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "TBI00157",
+          "so_luong": "30",
+          "ten_thuoc": "Binozyt 200mg/5ml"
+        }
+      ],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "",
+      "ngay_tai_kham": "10/02/1653",
+      "ngay_gio_ke_don": "2023-05-30 14:54:34",
+      "signature": "0"
+    },
+    {
+      "loai_don_thuoc": "c",
+      "ma_don_thuoc": "AAADĐ####@@@@@",
+      "ho_ten_benh_nhan": "",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/01/1970",
+      "can_nang": 8,
+      "gioi_tinh": 1,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "",
+      "chan_doan": [
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        },
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        }
+      ],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "1111111111111",
+          "dot_so": "1",
+          "so_thang": "2",
+          "tu_ngay": "1212121212121"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        }
+      ],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "0909090909",
+      "ngay_tai_kham": "01/01/1970",
+      "ngay_gio_ke_don": "1970-01-01 07:00:11",
+      "signature": "11111111"
+    },
+    {
+      "loai_don_thuoc": "AAAAAAAA",
+      "ma_don_thuoc": "AAAAAAAA",
+      "ho_ten_benh_nhan": "",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/01/1970",
+      "can_nang": 8,
+      "gioi_tinh": 1,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "",
+      "chan_doan": [
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        },
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        }
+      ],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "1111111111111",
+          "dot_so": "1",
+          "so_thang": "2",
+          "tu_ngay": "1212121212121"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        }
+      ],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "0909090909",
+      "ngay_tai_kham": "01/01/1970",
+      "ngay_gio_ke_don": "1970-01-01 07:00:11",
+      "signature": "11111111"
+    },
+    {
+      "loai_don_thuoc": "AAAAAAAA",
+      "ma_don_thuoc": "DFER",
+      "ho_ten_benh_nhan": "",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/01/1970",
+      "can_nang": 8,
+      "gioi_tinh": 1,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "",
+      "chan_doan": [
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        },
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        }
+      ],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "1111111111111",
+          "dot_so": "1",
+          "so_thang": "2",
+          "tu_ngay": "1212121212121"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        }
+      ],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "0909090909",
+      "ngay_tai_kham": "01/01/1970",
+      "ngay_gio_ke_don": "1970-01-01 07:00:11",
+      "signature": "11111111"
+    },
+    {
+      "loai_don_thuoc": "c",
+      "ma_don_thuoc": "GHJUYI",
+      "ho_ten_benh_nhan": "",
+      "ma_dinh_danh_y_te": "",
+      "ma_dinh_danh_cong_dan": "",
+      "ngay_sinh_benh_nhan": "01/01/1970",
+      "can_nang": 8,
+      "gioi_tinh": 1,
+      "ma_so_the_bao_hiem_y_te": "",
+      "thong_tin_nguoi_giam_ho": "",
+      "dia_chi": "",
+      "chan_doan": [
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        },
+        {
+          "ket_luan": "",
+          "ma_chan_doan": "",
+          "ten_chan_doan": ""
+        }
+      ],
+      "luu_y": "",
+      "hinh_thuc_dieu_tri": "",
+      "dot_dung_thuoc": [
+        {
+          "den_ngay": "1111111111111",
+          "dot_so": "1",
+          "so_thang": "2",
+          "tu_ngay": "1212121212121"
+        }
+      ],
+      "thong_tin_don_thuoc": [
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        },
+        {
+          "biet_duoc": "",
+          "cach_dung": "",
+          "don_vi_tinh": "",
+          "ma_thuoc": "",
+          "so_luong": "10",
+          "ten_thuoc": ""
+        }
+      ],
+      "loi_dan": "",
+      "so_dien_thoai_nguoi_kham_benh": "0909090909",
+      "ngay_tai_kham": "01/01/1970",
+      "ngay_gio_ke_don": "1970-01-01 07:00:11",
+      "signature": "11111111"
+    }
   ],
   "products": [
     {
@@ -115,6 +683,18 @@
       "status": true,
       "createdAt": 1610632995000,
       "modifiedAt": 1615620960000
+    }
+  ],
+  "appData": [
+    {
+      "id": 1,
+      "name": "APP001",
+      "key": "AAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "id": 2,
+      "name": "APP002",
+      "key": "BBBBBBBBBBBBBBBBBB"
     }
   ]
 }

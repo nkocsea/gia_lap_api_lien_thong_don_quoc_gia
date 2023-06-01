@@ -18,8 +18,10 @@ import {
   uploadFilesHandler,
   medicalFacilityHandler,
   addDoctorHandler,
+  removeDoctorHandler,
   doctorLoginHandler,
   sendPrescriptionHandler,
+  getPrescriptionHandler,
 } from './src/rest.js';
 import socketHandler from './src/socket-io.js';
 
@@ -72,8 +74,15 @@ app.post('/socket-emit', (req, res) => {
 });
 
 // Test request (change the response in src/rest.js)
-app.get('/test', (req, res) => {
+app.get('/testd', (req, res) => {
   testHandler(db, req, res);
+  // getPrescriptionHandler(db, req, res);
+});
+
+app.get('/api/v1/thong-tin-don-thuoc/:code', (req, res) => {
+  const code = req.params.code;
+  console.log("nvp::thong-tin-don-thuoc ", code);
+  getPrescriptionHandler(db, req, res);
 });
 
 // Register request
@@ -100,8 +109,15 @@ app.post('/api/v1/gui-don-thuoc', (req, res) => {
   sendPrescriptionHandler(db, req, res);
  });
 
+
+
+
 app.post('/api/v1/them-bac-si', (req, res) => {
   addDoctorHandler(db, req, res);
+});
+
+app.post('/api/v1/xoa-bac-si', (req, res) => {
+  removeDoctorHandler(db, req, res);
 });
 
 // Renew Token request
